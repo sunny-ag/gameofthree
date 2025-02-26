@@ -1,0 +1,30 @@
+package com.justeattakeaway.gameofthree.domain.service;
+
+import com.justeattakeaway.gameofthree.domain.exception.PlayerAlreadyPresentException;
+import com.justeattakeaway.gameofthree.domain.exception.PlayerGenericException;
+import com.justeattakeaway.gameofthree.domain.model.Player;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+@Service
+public class PlayerService {
+
+    /**
+     * Creates a list of Player objects from a list of player names.
+     *
+     * @param playerNames a list of player names
+     * @return a list of Player objects
+     * @throws PlayerGenericException if there are less than 2 player names
+     */
+    public List<Player> createPlayer(List<String>  playerNames) {
+        
+
+        return playerNames.stream()
+                .map(playerName -> new Player(UUID.randomUUID(), playerName))
+                .collect(Collectors.toList());
+    }
+}
