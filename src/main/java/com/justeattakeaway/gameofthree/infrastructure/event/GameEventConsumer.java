@@ -22,9 +22,6 @@ public class GameEventConsumer {
 
     private GameService gameService;
 
-//    @Autowired
-//    private ObjectMapper objectMapper;
-
     @Autowired
     public GameEventConsumer(GameService gameService) {
         this.gameService = gameService;

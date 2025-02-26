@@ -21,10 +21,4 @@ public class GameController {
     public Game startGame(@RequestBody GameRequest gameRequest) {
         return gameService.startGame(gameRequest.getInitialValue(), gameRequest.getPlayerNames());
     }
-
-    @PostMapping("/game")
-    public Game test(@RequestBody Game game) {
-        System.out.println("Test");
-        return game;
-    }
 }
