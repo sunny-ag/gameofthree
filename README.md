@@ -53,9 +53,7 @@ This project follows the Domain-Driven Design (DDD) principles:\
     * cd gameofthree
  - Run Docker Compose
     * docker compose up -d
- - Build Application Jar File
-    * .\gradlew clean build
- - Run the application
+ - Build and Run the application
     * .\gradlew bootRun
   
 # Sample Request & URL
